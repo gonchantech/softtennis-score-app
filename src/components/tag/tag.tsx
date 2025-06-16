@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Tag.module.css";
+import styles from "./tag.module.css";
 
 type TagSize = "sm" | "md" | "lg";
 type TagColor = "primary" | "secondary" | "purple";

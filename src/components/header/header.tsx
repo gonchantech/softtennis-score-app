@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import styles from "./Header.module.css";
+import styles from "./header.module.css";
 import { useUser } from "@/features/auth";
 import { LogoutButton } from "@/features/auth";
 import { Button } from "@/components/button";
