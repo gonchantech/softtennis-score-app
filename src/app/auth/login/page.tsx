@@ -7,13 +7,14 @@ import { Container } from "@/components/container";
 
 const LoginPageContent = () => {
   const router = useRouter();
-  const redirect = useSearchParams().get("redirect") as string;
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect");
 
   const onSuccess = () => {
-    if (redirect && redirect !== "") {
-      router.replace(redirect);
+    if (redirect) {
+      router.push(decodeURIComponent(redirect));
     } else {
-      router.replace("/");
+      router.push("/");
     }
   };
 
