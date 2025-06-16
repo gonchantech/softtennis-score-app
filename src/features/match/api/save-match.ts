@@ -31,6 +31,8 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
       player_B1_name: match.matchMeta.playerB1Name,
       player_B2_name: match.matchMeta.playerB2Name,
       initial_server: match.matchMeta.initialServer,
+      team_A_games: match.points[match.points.length - 1].teamAGames,
+      team_B_games: match.points[match.points.length - 1].teamBGames,
       user_id: user.id,
     })
     .select()
