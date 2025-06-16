@@ -1,0 +1,196 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* サイズ */
+.small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.medium {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* バリアント */
+.solid {
+  border: none;
+}
+
+.outline {
+  border: 2px solid;
+  background: transparent;
+}
+
+.ghost {
+  border: none;
+  background: transparent;
+}
+
+/* カラー */
+.primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.primary.outline {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.primary.outline:hover {
+  background-color: var(--color-primary-light);
+}
+
+.primary.ghost {
+  color: var(--color-primary);
+}
+
+.primary.ghost:hover {
+  background-color: var(--color-primary-light);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.secondary:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.secondary.outline {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.secondary.outline:hover {
+  background-color: var(--color-secondary-light);
+}
+
+.secondary.ghost {
+  color: var(--color-secondary);
+}
+
+.secondary.ghost:hover {
+  background-color: var(--color-secondary-light);
+}
+
+.danger {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.danger:hover {
+  background-color: var(--color-danger-dark);
+}
+
+.danger.outline {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.danger.outline:hover {
+  background-color: var(--color-danger-light);
+}
+
+.danger.ghost {
+  color: var(--color-danger);
+}
+
+.danger.ghost:hover {
+  background-color: var(--color-danger-light);
+}
+
+.gray {
+  background-color: var(--color-gray-3);
+  color: white;
+}
+
+.gray:hover {
+  background-color: var(--color-gray-4);
+}
+
+.gray.outline {
+  border-color: var(--color-gray-3);
+  color: var(--color-gray-3);
+}
+
+.gray.outline:hover {
+  background-color: var(--color-gray-1);
+}
+
+.gray.ghost {
+  color: var(--color-gray-3);
+}
+
+.gray.ghost:hover {
+  background-color: var(--color-gray-1);
+}
+
+/* 状態 */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.loadingSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.iconLeft {
+  margin-right: 0.5rem;
+}
+
+.iconRight {
+  margin-left: 0.5rem;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

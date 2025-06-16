@@ -1,0 +1,33 @@
+/* src/components/container/Container.module.css */
+.container {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--color-background);
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.start {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.end {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.height-full {
+  min-height: 100vh;
+}
+
+.height-auto {
+  min-height: auto;
+}
+
+.height-half {
+  min-height: 50vh;
+}
