@@ -2,11 +2,18 @@
 import { SignupForm } from "@/features/auth";
 import { useRouter } from "next/navigation";
 import { Container } from "@/components/container";
+import { useNotification } from "@/context/notifications";
 
 const SignupPage = () => {
   const router = useRouter();
+  const { showNotification } = useNotification();
 
   const onSuccess = () => {
+    showNotification({
+      type: "success",
+      title: "サインアップ成功",
+      message: "確認メールを送信しました。メールを確認してください",
+    });
     router.replace("/auth/login");
   };
 
