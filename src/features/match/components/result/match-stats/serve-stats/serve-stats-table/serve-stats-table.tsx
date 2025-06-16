@@ -20,7 +20,7 @@ export const ServeStatsTable: React.FC<ServeStatsTableProps> = ({
         <thead>
           <tr>
             <th>選手</th>
-            <th>ファーストサーブ試行</th>
+            <th>1st試行</th>
             <th>成功</th>
             <th>成功率</th>
           </tr>
