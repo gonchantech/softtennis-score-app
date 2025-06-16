@@ -23,7 +23,14 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
   const { data: matchMeta, error: matchMetaError } = await supabase
     .from("match_meta")
     .insert({
-      ...match.matchMeta,
+      match_length: match.matchMeta.matchLength,
+      team_A_name: match.matchMeta.teamAName,
+      team_B_name: match.matchMeta.teamBName,
+      player_A1_name: match.matchMeta.playerA1Name,
+      player_A2_name: match.matchMeta.playerA2Name,
+      player_B1_name: match.matchMeta.playerB1Name,
+      player_B2_name: match.matchMeta.playerB2Name,
+      initial_server: match.matchMeta.initialServer,
       user_id: user.id,
     })
     .select()
@@ -36,16 +43,37 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
   if (match.points.length > 0) {
     const { error: pointsError } = await supabase.from("point").insert(
       match.points.map((point) => ({
-        ...point,
+        server: point.server,
+        timestamp: point.timestamp,
+        first_serve_in: point.firstServeIn,
+        rally_length: point.rallyLength,
+        player: point.player,
+        play_type: point.playType,
+        ball_course: point.ballCourse,
+        error_course: point.errorCause,
+        game_number: point.gameNumber,
+        team_A_score: point.teamAScore,
+        team_B_score: point.teamBScore,
+        team_A_games: point.teamAGames,
+        team_B_games: point.teamBGames,
         match_id: matchMeta.id,
       }))
     );
 
-    if (pointsError) throw pointsError;
+    if (pointsError) {
+      console.error("Points save error:", pointsError);
+      throw new Error(
+        `ポイントデータの保存に失敗しました: ${pointsError.message}`
+      );
+    }
   }
 
   return {
-    matchMeta: matchMeta,
+    matchMeta: {
+      ...match.matchMeta,
+      id: matchMeta.id,
+      user_id: user.id,
+    },
     points: match.points,
   };
 };
