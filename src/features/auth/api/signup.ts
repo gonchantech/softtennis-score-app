@@ -58,11 +58,9 @@ export const useSignup = ({ onSuccess, onError }: UseSignupOptions) => {
   const { mutate: submit, isPending } = useMutation({
     mutationFn: Signup,
     onSuccess: ({ user }) => {
-      console.log("ユーザー登録成功", user);
       onSuccess?.(user);
     },
     onError: (error) => {
-      console.log("ユーザー登録失敗", error);
       onError?.(error);
     },
   });

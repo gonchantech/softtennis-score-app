@@ -8,6 +8,20 @@ type SaveMatchParams = {
   match: Match;
 };
 
+const getErrorMessage = (error: Error): string => {
+  const message = error.message.toLowerCase();
+  if (message.includes("auth")) {
+    return "ログインが必要です";
+  }
+  if (message.includes("match_meta")) {
+    return "試合データの保存に失敗しました";
+  }
+  if (message.includes("point")) {
+    return "ポイントデータの保存に失敗しました";
+  }
+  return "データの保存に失敗しました。しばらく経ってから再度お試しください";
+};
+
 export const saveMatch = async ({ match }: SaveMatchParams) => {
   const supabase = createClient();
 
@@ -16,7 +30,7 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
     data: { user },
     error: userError,
   } = await supabase.auth.getUser();
-  if (userError) throw userError;
+  if (userError) throw new Error(getErrorMessage(userError));
   if (!user) throw new Error("ログインが必要です");
 
   // match_metaを保存
@@ -38,7 +52,7 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
     .select()
     .single();
 
-  if (matchMetaError) throw matchMetaError;
+  if (matchMetaError) throw new Error(getErrorMessage(matchMetaError));
   if (!matchMeta) throw new Error("試合データの保存に失敗しました");
 
   // pointsを保存
@@ -63,10 +77,7 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
     );
 
     if (pointsError) {
-      console.error("Points save error:", pointsError);
-      throw new Error(
-        `ポイントデータの保存に失敗しました: ${pointsError.message}`
-      );
+      throw new Error(getErrorMessage(pointsError));
     }
   }
 
