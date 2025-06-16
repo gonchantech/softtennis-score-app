@@ -5,13 +5,14 @@ import styles from "./header.module.css";
 import { useUser } from "@/features/auth";
 import { LogoutButton } from "@/features/auth";
 import { Button } from "@/components/button";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Stack } from "../stack/";
 import { useNotification } from "@/context/notifications";
 
 export const Header: React.FC = () => {
   const { data: user, isLoading } = useUser();
   const router = useRouter();
+  const pathname = usePathname();
   const { showNotification } = useNotification();
 
   const onTopClick = () => {
@@ -23,7 +24,7 @@ export const Header: React.FC = () => {
   };
 
   const onLoginClick = () => {
-    router.push("/auth/login");
+    router.push(`/auth/login?redirect=${encodeURIComponent(pathname)}`);
   };
 
   const onLogoutSuccess = () => {
@@ -32,7 +33,6 @@ export const Header: React.FC = () => {
       message: "ログアウトしました",
       title: "ログアウト成功",
     });
-    router.push("/");
   };
 
   const onLogoutError = () => {
