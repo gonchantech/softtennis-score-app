@@ -80,14 +80,21 @@ export const saveMatch = async ({ match }: SaveMatchParams) => {
 
 type UseSaveMatchParams = {
   onSuccess?: (match: Match) => void;
+  onError?: (error: Error) => void;
 };
 
-export const useSaveMatch = ({ onSuccess }: UseSaveMatchParams = {}) => {
+export const useSaveMatch = ({
+  onSuccess,
+  onError,
+}: UseSaveMatchParams = {}) => {
   const { mutate: submit, isPending } = useMutation({
     mutationFn: saveMatch,
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ["matches"] });
       onSuccess?.(data);
+    },
+    onError: (error: Error) => {
+      onError?.(error);
     },
   });
 
