@@ -1,8 +1,8 @@
-import { handleGameComplete } from "../handleGameComplete";
-import { MatchState, RawPointInput } from "@/features/match";
-import { Player } from "@/features/match/types/player";
-import { changeStateAfterGameComplete } from "../changeStateAfterGameComplete";
-import { createNewPointEntry } from "../../createNewPointEntry";
+import { handleGameComplete } from "../handle-game-complete";
+import { MatchState } from "@/context/match-state";
+import { RawPointInput, Player } from "@/types";
+import { changeStateAfterGameComplete } from "../change-state-after-game-complete";
+import { createNewPointEntry } from "../../create-new-point-entry";
 
 jest.mock("../changeStateAfterGameComplete");
 jest.mock("../../createNewPointEntry");

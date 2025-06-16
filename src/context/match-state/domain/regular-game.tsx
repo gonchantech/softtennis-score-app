@@ -1,5 +1,5 @@
 import { RawPointInput, Player } from "@/types";
-import { addPoint } from "./utils/addPoint/addPoint";
+import { addPoint } from "./utils/addPoint/add-point";
 import { MatchState } from "../types";
 
 type RegularGameAddPointProps = {

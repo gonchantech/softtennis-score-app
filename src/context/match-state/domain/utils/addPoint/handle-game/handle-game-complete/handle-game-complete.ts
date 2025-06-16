@@ -1,6 +1,7 @@
-import { MatchState, RawPointInput } from "@/features/match";
-import { changeStateAfterGameComplete } from "./changeStateAfterGameComplete";
-import { createNewPointEntry } from "../createNewPointEntry";
+import { MatchState } from "@/context/match-state";
+import { RawPointInput } from "@/types";
+import { changeStateAfterGameComplete } from "./change-state-after-game-complete";
+import { createNewPointEntry } from "../create-new-point-entry";
 
 type HandleGameCompleteProps = {
   prevState: MatchState;

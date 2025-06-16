@@ -1,9 +1,10 @@
-import { MatchState, RawPointInput, Player } from "@/features/match";
-import { calculateNewScore } from "./calculateNewScore";
-import { checkIsGameComplete } from "./checkIsGameComplete";
-import { checkIsMatchComplete } from "./checkIsMatchComplete";
-import { handleGameComplete } from "./handleGame/handleGameComplete";
-import { handleGameInProgress } from "./handleGame/handleGameInProgress";
+import { MatchState } from "@/context/match-state";
+import { RawPointInput, Player } from "@/types";
+import { calculateNewScore } from "./calculate-new-score";
+import { checkIsGameComplete } from "./check-is-game-complete";
+import { checkIsMatchComplete } from "./check-is-match-complete";
+import { handleGameComplete } from "./handle-game/handle-game-complete";
+import { handleGameInProgress } from "./handle-game/handleGameInProgress";
 
 type AddPointProps = {
   calculateNewServerWhenGameNotFinished: (

@@ -1,6 +1,5 @@
-import { calculateNewScore } from "../calculateNewScore";
-import { RawPointInput } from "@/features/match";
-import { Player } from "@/features/match/types/player";
+import { calculateNewScore } from "../calculate-new-score";
+import { RawPointInput, Player } from "@/types";
 import { getIsTeamAPoint } from "@/utils/getIsTeamAPoint";
 
 jest.mock("@/utils/getIsTeamAPoint");

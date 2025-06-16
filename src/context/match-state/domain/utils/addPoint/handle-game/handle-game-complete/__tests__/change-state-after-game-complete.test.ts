@@ -1,4 +1,4 @@
-import { changeStateAfterGameComplete } from "../changeStateAfterGameComplete";
+import { changeStateAfterGameComplete } from "../change-state-after-game-complete";
 
 describe("changeStateAfterGameComplete", () => {
   it("should change server from team A to team B", () => {

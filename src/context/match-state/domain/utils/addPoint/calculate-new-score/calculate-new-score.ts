@@ -1,4 +1,4 @@
-import { RawPointInput } from "@/features/match";
+import { RawPointInput } from "@/types";
 import { getIsTeamAPoint } from "@/utils/getIsTeamAPoint";
 
 type CalculateNewScoreProps = {

@@ -1,4 +1,4 @@
-import { checkIsGameComplete } from "../checkIsGameComplete";
+import { checkIsGameComplete } from "../check-is-game-complete";
 
 describe("checkIsGameComplete", () => {
   describe("Normal game completion", () => {

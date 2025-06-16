@@ -1,4 +1,4 @@
-import { checkIsDeuceWhenGameNotFinished } from "../checkIsDeuceWhenGameNotFinished";
+import { checkIsDeuceWhenGameNotFinished } from "../check-is-deuce-when-game-not-finished";
 
 describe("checkIsDeuceWhenGameNotFinished", () => {
   describe("when pointLength is 4", () => {

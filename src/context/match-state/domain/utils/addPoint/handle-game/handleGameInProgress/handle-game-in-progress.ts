@@ -1,7 +1,8 @@
-import { MatchState, RawPointInput, Player } from "@/features/match";
-import { checkIsDeuceWhenGameNotFinished } from "./checkIsDeuceWhenGameNotFinished";
-import { checkIsAdvantageWhenGameNotFinished } from "./checkIsAdvantage";
-import { createNewPointEntry } from "../createNewPointEntry";
+import { MatchState } from "@/context/match-state";
+import { RawPointInput, Player } from "@/types";
+import { checkIsDeuceWhenGameNotFinished } from "./check-is-deuce-when-game-not-finished";
+import { checkIsAdvantageWhenGameNotFinished } from "./check-is-advantage";
+import { createNewPointEntry } from "../create-new-point-entry";
 
 export type HandleGameInProgressProps = {
   calculateNewServerWhenGameNotFinished: (

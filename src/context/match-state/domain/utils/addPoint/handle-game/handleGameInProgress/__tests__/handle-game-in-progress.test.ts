@@ -1,12 +1,12 @@
 import {
   handleGameInProgress,
   HandleGameInProgressProps,
-} from "../handleGameInProgress";
-import { MatchState, RawPointInput } from "@/features/match";
-import { Player } from "@/features/match/types/player";
-import { checkIsDeuceWhenGameNotFinished } from "../checkIsDeuceWhenGameNotFinished";
-import { checkIsAdvantageWhenGameNotFinished } from "../checkIsAdvantage";
-import { createNewPointEntry } from "../../createNewPointEntry";
+} from "../handle-game-in-progress";
+import { MatchState } from "@/context/match-state";
+import { RawPointInput, Player } from "@/types";
+import { checkIsDeuceWhenGameNotFinished } from "../check-is-deuce-when-game-not-finished";
+import { checkIsAdvantageWhenGameNotFinished } from "../check-is-advantage";
+import { createNewPointEntry } from "../../create-new-point-entry";
 
 jest.mock("../checkIsDeuceWhenGameNotFinished");
 jest.mock("../checkIsAdvantage");

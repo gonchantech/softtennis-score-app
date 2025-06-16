@@ -1,6 +1,6 @@
-import { createNewPointEntry } from "../createNewPointEntry";
-import { MatchState, RawPointInput } from "@/features/match";
-import { Player } from "@/features/match/types/player";
+import { createNewPointEntry } from "../create-new-point-entry";
+import { MatchState } from "@/context/match-state";
+import { RawPointInput, Player } from "@/types";
 
 describe("createNewPointEntry", () => {
   const mockPrevState: MatchState = {

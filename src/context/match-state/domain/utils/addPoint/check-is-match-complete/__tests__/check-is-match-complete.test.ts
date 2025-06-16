@@ -1,4 +1,4 @@
-import { checkIsMatchComplete } from "../checkIsMatchComplete";
+import { checkIsMatchComplete } from "../check-is-match-complete";
 
 describe("checkIsMatchComplete", () => {
   describe("Match completion", () => {

@@ -1,4 +1,4 @@
-import { checkIsAdvantageWhenGameNotFinished } from "../checkIsAdvantage";
+import { checkIsAdvantageWhenGameNotFinished } from "../check-is-advantage";
 
 describe("checkIsAdvantageWhenGameNotFinished", () => {
   describe("when not in deuce", () => {

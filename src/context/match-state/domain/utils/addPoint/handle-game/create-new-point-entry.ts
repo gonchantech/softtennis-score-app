@@ -1,4 +1,5 @@
-import { MatchState, PointData, RawPointInput } from "@/features/match";
+import { MatchState } from "@/context/match-state";
+import { PointData, RawPointInput } from "@/types";
 
 type CreateNewPointEntryProps = {
   prevState: MatchState;

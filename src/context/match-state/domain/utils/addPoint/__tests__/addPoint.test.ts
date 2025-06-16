@@ -1,11 +1,11 @@
-import { addPoint } from "../addPoint";
+import { addPoint } from "../add-point";
 import { MatchState, RawPointInput } from "@/features/match";
 import { Player } from "@/features/match/types/player";
-import { calculateNewScore } from "../calculateNewScore";
-import { checkIsGameComplete } from "../checkIsGameComplete";
-import { checkIsMatchComplete } from "../checkIsMatchComplete";
-import { handleGameComplete } from "../handleGame/handleGameComplete";
-import { handleGameInProgress } from "../handleGame/handleGameInProgress";
+import { calculateNewScore } from "../calculate-new-score";
+import { checkIsGameComplete } from "../check-is-game-complete";
+import { checkIsMatchComplete } from "../check-is-match-complete";
+import { handleGameComplete } from "../handle-game/handle-game-complete";
+import { handleGameInProgress } from "../handle-game/handleGameInProgress";
 
 jest.mock("../calculateNewScore");
 jest.mock("../checkIsGameComplete");

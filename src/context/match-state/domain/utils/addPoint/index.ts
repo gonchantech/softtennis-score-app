@@ -1,1 +1,1 @@
-export * from "./addPoint";
+export * from "./add-point";
