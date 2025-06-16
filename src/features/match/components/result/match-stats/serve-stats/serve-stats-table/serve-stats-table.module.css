@@ -1,0 +1,98 @@
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table td {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  color: #6b7280;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.playerTag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.teamA {
+  background-color: var(--color-secondary-lighter);
+  color: var(--color-secondary);
+}
+
+.teamB {
+  background-color: var(--color-primary-lighter);
+  color: var(--color-primary);
+}
+
+.netPoints {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.section {
+  margin-top: 0.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.sectionHeader h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.totalCount {
+  font-weight: 700;
+  color: #374151;
+}
+
+.successRate {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.noData {
+  font-size: 0.875rem;
+  color: #6b7280;
+}

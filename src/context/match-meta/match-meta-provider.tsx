@@ -2,7 +2,7 @@
 import { useEffect, useReducer } from "react";
 import { MatchMeta } from "./types";
 import { MatchMetaContext } from "./match-meta-context";
-import { defaultMatchMeta } from "./constants/defaultMatchMeta";
+import { defaultMatchMeta } from "./constants/default-match-meta";
 import { matchMetaReducer } from "./match-meta-reducer";
 
 export const MatchMetaProvider: React.FC<{ children: React.ReactNode }> = ({

@@ -1,0 +1,98 @@
+.container {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  background: #4b5563;
+  color: #fff;
+  padding: 0.75rem 0;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .scoreContainer {
+    flex-direction: row;
+  }
+}
+
+.teamScore {
+  flex: 1;
+  padding: 1rem;
+}
+
+.servingA {
+  background: var(--color-secondary-lighter);
+}
+
+.servingB {
+  background: var(--color-primary-lighter);
+}
+
+.advantage {
+  background: #fef9c3;
+}
+
+.teamInfo {
+  text-align: center;
+}
+
+.teamNameA {
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.teamNameB {
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.games {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+}
+
+.player {
+  font-size: 1rem;
+}
+
+.status {
+  background: #f3f4f6;
+  padding: 0.5rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.serverNameA {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.serverNameB {
+  font-weight: bold;
+  color: var(--color-primary);
+}

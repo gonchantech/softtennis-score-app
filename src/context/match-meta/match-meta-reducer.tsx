@@ -1,4 +1,4 @@
-import { defaultMatchMeta } from "./constants/defaultMatchMeta";
+import { defaultMatchMeta } from "./constants/default-match-meta";
 import { MatchMetaAction, MatchMeta } from "./types";
 
 export const matchMetaReducer = (

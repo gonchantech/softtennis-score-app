@@ -1,0 +1,55 @@
+.statItem {
+  width: 100%;
+  background-color: var(--color-gray-1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.statTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-5);
+  margin-bottom: 0.5rem;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progressBar {
+  flex: 1;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.625rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.shortRally {
+  background-color: var(--color-secondary);
+}
+
+.longRally {
+  background-color: var(--color-primary);
+}
+
+.percentage {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-5);
+  min-width: 3rem;
+}
+
+.count {
+  font-size: 0.875rem;
+  color: var(--color-gray-4);
+  margin-top: 0.25rem;
+}

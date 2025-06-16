@@ -1,0 +1,61 @@
+.pointItem {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-gray-1);
+  display: flex;
+  align-items: center;
+}
+
+.teamAPoint {
+  background-color: var(--color-secondary-lighter);
+}
+
+.teamBPoint {
+  background-color: var(--color-primary-lighter);
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.score {
+  font-weight: 600;
+  color: var(--color-gray-6);
+}
+
+.gameScore {
+  font-size: 0.875rem;
+  color: var(--color-gray-4);
+  margin-left: 0.25rem;
+}
+
+.timestamp {
+  font-size: 0.875rem;
+  color: var(--color-gray-4);
+}
+
+.pointInfo {
+  font-size: 0.875rem;
+  color: var(--color-gray-5);
+}
+
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.playerName {
+  font-weight: 500;
+}
+
+.playType {
+  font-weight: 500;
+}
+
+.errorText {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}

@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { MatchMeta, MatchMetaAction } from "./types";
-import { defaultMatchMeta } from "./constants/defaultMatchMeta";
+import { defaultMatchMeta } from "./constants/default-match-meta";
 
 export const MatchMetaContext = createContext<{
   state: MatchMeta;

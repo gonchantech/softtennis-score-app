@@ -1,0 +1,30 @@
+.team {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.teamNameGreen {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.teamNameIndigo {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.games {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.players {
+  font-size: 0.875rem;
+  color: var(--color-gray-5);
+}

@@ -1,0 +1,49 @@
+.container {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  background: var(--color-gray-6);
+  color: #fff;
+  padding: 0.25rem 0;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.format {
+  font-size: 0.875rem;
+  color: var(--color-gray-3);
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .teams {
+    flex-direction: row;
+  }
+}
+
+.divider {
+  border-top: 1px solid var(--color-gray-2);
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .divider {
+    border-top: none;
+    border-left: 1px solid var(--color-gray-2);
+    margin: 0 0.5rem;
+  }
+}

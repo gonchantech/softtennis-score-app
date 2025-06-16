@@ -1,7 +1,7 @@
 import { renderHook, act } from "@testing-library/react";
 import { MatchMeta } from "../types";
 import { useMatchMeta } from "../use-match-context";
-import { defaultMatchMeta } from "../constants/defaultMatchMeta";
+import { defaultMatchMeta } from "../constants/default-match-meta";
 import { MatchMetaProvider } from "../match-meta-provider";
 
 const testMatchMeta: MatchMeta = {
