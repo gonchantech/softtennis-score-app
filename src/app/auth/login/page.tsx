@@ -17,6 +17,7 @@ const LoginPageContent = () => {
       router.push("/");
     }
   };
+  //これコンソールじゃわかりにくいから替えよう
 
   const onError = () => {
     console.log("ログインに失敗しました。id, name, passwordを確認してください");
