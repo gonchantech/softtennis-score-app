@@ -55,9 +55,9 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <h1 className={styles.title}>ソフトテニススコアキーパー</h1>
-        <Stack direction="horizontal" gap="sm">
+        <Stack direction="horizontal" gap="sm" className={styles.links}>
           <Button onClick={onTopClick} variant="solid" size="md" color="gray">
-            トップ画面へ
+            ホームへ
           </Button>
           {isLoading ? (
             <div>Loading...</div>
@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
                 size="md"
                 color="gray"
               >
-                過去の試合
+                試合履歴
               </Button>
               <LogoutButton
                 onSuccess={onLogoutSuccess}
