@@ -1,7 +1,6 @@
-import { renderHook, act, waitFor } from "@testing-library/react";
+import { renderHook, act } from "@testing-library/react";
 import { NotificationType } from "../types";
 import { useNotification } from "../use-notification";
-import { AppProvider } from "@/providers/AppProvider";
 import { NotificationProvider } from "../notification-provider";
 import { ReactNode } from "react";
 

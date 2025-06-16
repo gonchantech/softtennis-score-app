@@ -1,10 +1,11 @@
 "use client";
 
+import { Suspense } from "react";
 import { LoginForm } from "@/features/auth";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Container } from "@/components/container";
 
-const LoginPage = () => {
+const LoginPageContent = () => {
   const router = useRouter();
   const redirect = useSearchParams().get("redirect") as string;
 
@@ -27,4 +28,10 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginPageContent />
+    </Suspense>
+  );
+}

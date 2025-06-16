@@ -1,2 +1,2 @@
 export * from "./notification";
-export * from "./notificationAction";
+export * from "./notification-action";
